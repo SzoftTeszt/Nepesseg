@@ -1,0 +1,18 @@
+{{ujFelmeres|json}}
+<div class="card" >
+   
+    <div class="card-body">
+      <h5 class="card-title">Új felmérés felvitele</h5>
+        
+      <div *ngFor="let oszlop of oszlopok" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+                {{oszlop}}
+          </span>
+        </div>
+        <input [(ngModel)]="ujFelmeres[oszlop]" min="0" type="number" class="form-control">
+      </div>
+
+      <button (click)="new()" type="button" class="btn btn-primary">Küldés</button>
+    </div>
+  </div>

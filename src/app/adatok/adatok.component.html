@@ -1,0 +1,6 @@
+<div class="row my-4">
+<div *ngFor="let oszlop of oszlopokHU" class="col">{{oszlop}}</div>
+</div>
+<div *ngFor="let adat of adatok | orderByYear" class="row my-2">
+<div *ngFor="let oszlop of oszlopok" class="col">{{adat[oszlop]}}</div>
+</div>
